@@ -3,90 +3,121 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign up | MoneyNow</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="site-container flex">
-      <div class="splash-container flex-column">
-        <div class="padding"></div>
-        <div class="logo flex">
-          <img src="images/logo.png" alt="logo" width="50px">
-          <h1>MONEYNOW</h1>
-        </div>
-        <div class="credits">
-          <p class="copyright">
-            Copyright © 
-            <span id="currentYear">2XXX</span>
-            rintheo
-            <a href="https://github.com/rintheo/">
-              <img src="images/github-mark-white.png" alt="github logo" width="10px">
-            </a>
-          </p>
-          <p>Photo from <a href="https://www.pxfuel.com/en/desktop-wallpaper-odlgr">pxfuel</a>
-            <span> | Logo from <a href="https://www.vecteezy.com/free-png/money">Vecteezy</a></span>
-          </p>
-        </div>
-      </div>
-      <main class="main flex-column">
-        <section class="intro">
-          <p>Do you want to make your dreams of unimaginable wealth come true?
-             Our team of financial wizards will guide you on an extraordinary journey to riches beyond your wildest imagination. 
-             Take the first step towards a life of opulence and register today.
-          </p>            
-          <p>It's as <i>easy</i> as a wink!</p>
-        </section>
-        <form action="" class="form">
-          <section class="form-input">
-            <p>Start here!</p>
-            <ul class="flex-column">
-              <li>
-                <ul class="input-group flex">              
-                  <li class="input-item">
-                    <p><label for="firstName">First name</label></p>
-                    <input type="text" id="firstName" name="firstName">
-                  </li>
-                  <li class="input-item">
-                    <p><label for="lastName">Last name</label></p>
-                    <input type="text" id="lastName" name="lastName">
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <ul class="input-group flex">        
-                  <li class="input-item">
-                    <p><label for="email">Email</label></p>
-                    <input type="email" id="email" name="email">
-                  </li>
-                  <li class="input-item">
-                    <p><label for="phoneNumber">Phone Number</label></p>
-                    <input type="tel" id="phoneNumber" name="phoneNumber">
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <ul class="input-group flex">        
-                  <li class="input-item">
-                    <p><label for="password">Password</label></p>
-                    <input type="password" id="password" name="password">
-                  </li>
-                  <li class="input-item">
-                    <p><label for="confirmPassword">Confirm Password</label></p>
-                    <input type="password" id="confirmPassword" name="confirmPassword">
-                  </li>
-                </ul>
-              </li>              
-            </ul>
-          </section>
-          <div class="form-submit">
-            <button type="submit" id="createAccountButton">Create Account</button>
-            <p>Already have an account? <a href="" id="logInLink">Log in</a></p>
+    <div class="site-container">
+      <div class="main-container flex">
+        <div class="splash-container flex-column">
+          <div class="padding"></div>
+          <div class="logo flex">
+            <img src="images/logo.png" alt="logo" width="50px">
+            <h1>MONEYNOW</h1>
           </div>
-        </form>
-      </main>
+          <div class="credits">
+            <p class="copyright">
+              Copyright ©
+              <span id="currentYear">2XXX</span>
+              rintheo
+              <a href="https://github.com/rintheo/">
+                <img src="images/github-mark-white.png" alt="github logo" width="10px">
+              </a>
+            </p>
+            <p>Photo from <a href="https://www.pxfuel.com/en/desktop-wallpaper-odlgr">pxfuel</a>
+              <span> | Logo from <a href="https://www.vecteezy.com/free-png/money">Vecteezy</a></span>
+            </p>
+          </div>
+        </div>
+        <main class="main flex-column">
+          <section class="intro">
+            <p>Do you want to make your dreams of unimaginable wealth come true?
+               Our team of financial wizards will guide you on an extraordinary journey to riches beyond your wildest imagination.
+               Take the first step towards a life of opulence and register today.
+            </p>
+            <p>It's as <i>easy</i> as a wink!</p>
+          </section>
+          <form action="" class="form">
+            <section class="form-input">
+              <p>Start here!</p>
+              <ul class="flex-column">
+                <li>
+                  <ul class="input-group flex">
+                    <li class="input-item flex-column">
+                      <input 
+                        type="text" 
+                        id="firstName" 
+                        name="firstName"
+                        placeholder="John"
+                        required >
+                      <label for="firstName ">First name</label> 
+                    </li>
+                    <li class="input-item flex-column">
+                      <input 
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        placeholder="Titor"
+                        required >
+                      <label for="lastName">Last name</label>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="input-group flex" >
+                    <li class="input-item flex-column">
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="johntitor@email.com"
+                        required >
+                      <label for="email">Email</label>
+                    </li>
+                    <li class="input-item flex-column">
+                      <label for="phoneNumber">Phone Number</label>
+                      <input 
+                        type="tel" 
+                        id="phoneNumber" 
+                        name="phoneNumber" >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="input-group flex">
+                    <li class="input-item flex-column">
+                      <input 
+                        type="password" 
+                        id="password" 
+                        class="error" 
+                        name="password"
+                        required >
+                      <label for="password">Password</label>
+                      <div class="error"></div>
+                    </li>
+                    <li class="input-item flex-column">
+                      <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        class="error"
+                        name="confirmPassword"
+                        required >
+                      <label for="confirmPassword">Confirm Password</label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </section>
+            <div class="form-submit">
+              <button type="submit" id="createAccountButton">Create Account</button>
+              <p>Already have an account? <a href="" id="logInLink">Log in</a></p>
+            </div>
+          </form>
+        </main>
+      </div>
     </div>
   </body>
 </html>

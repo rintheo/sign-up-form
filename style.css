@@ -35,16 +35,18 @@ a:hover {
     flex-direction: column;
 }
 
-body {
+.site-container {
+    height: 100vh;
     background-image: url(images/background-blurred.png);
     background-size: cover;
     background-position: center;
+    padding: 1rem;
 }
 
-.site-container {
+.main-container {
     height: calc(100vh - 2rem);
     max-width: 1280px;
-    margin: 1rem auto;
+    margin: 0 auto;
     overflow: hidden;
     border-radius: 2rem;
     box-shadow: 5px 5px 5px #17160d; 
@@ -84,6 +86,7 @@ body {
 
 .copyright img:hover {
     transform: scale(1.1);
+    transition: 0.15s;
 }
 
 .credits {
@@ -121,7 +124,7 @@ body {
     padding: 1.5rem 3rem;
     margin-bottom: 2rem;
     border: 1px solid #c6d1c6;
-    box-shadow: 3px 3px 3px #afb3af; 
+    box-shadow: 0px 3px 3px #d2d6d2; 
 }
 
 .form-input > p {
@@ -138,26 +141,51 @@ body {
     font-size: 0.65rem;
     font-weight: 500;
     letter-spacing: 0.05rem;
-    text-transform: uppercase;
     margin-bottom:1.5rem;
 }
 
 .input-item > input {
+    order: 2;
     height: 1.75rem;
     width: 225px;
+    padding: 0 0.5rem;
     border: 1px solid #c6d1c6;
     border-radius: 4px;
-    box-shadow: inset 1px 1px 1px #ebf0eb;
+}
+
+.input-item > input::placeholder {
+    color:lightgray;
 }
 
 .input-item > input:focus {
     outline: none;
     border: 2px solid #758761;
+    box-shadow: inset 1px 1px 1px #ebf0eb;
+}
+
+.input-item > input:required + label::after {
+    content:' *';
+    color: red;
+}
+
+.input-item > label {
+    order: 1;
+    text-transform: uppercase;
+}
+
+.input-item > div.error {
+    order: 3;
+    color: red;
+}
+
+div.error::after {
+    content: '❌ Passwords do not match.';
 }
 
 .form-submit {
     padding: 0 3rem;
 }
+
 
 #createAccountButton {
     background: #758761;
