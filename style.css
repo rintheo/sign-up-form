@@ -35,6 +35,10 @@ a:hover {
     flex-direction: column;
 }
 
+.hidden {
+    opacity: 0;
+}
+
 .site-container {
     height: 100vh;
     background-image: url(images/background-blurred.png);
@@ -141,13 +145,14 @@ a:hover {
     font-size: 0.65rem;
     font-weight: 500;
     letter-spacing: 0.05rem;
-    margin-bottom:1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .input-item > input {
     order: 2;
     height: 1.75rem;
     width: 225px;
+    margin: 0.1rem 0;
     padding: 0 0.5rem;
     border: 1px solid #c6d1c6;
     border-radius: 4px;
@@ -163,6 +168,28 @@ a:hover {
     box-shadow: inset 1px 1px 1px #ebf0eb;
 }
 
+.input-item > input.touched:invalid {
+    outline: none;
+    border: 1px solid red;
+}
+
+.input-item > input.touched:invalid:focus {
+    outline: none;
+    border: 2px solid red;
+}
+
+.input-item > input.touched:invalid + label{
+    color: red;
+}
+
+.invalid-feedback {
+    opacity: 0;
+}
+
+.input-item > input.touched:invalid ~ .invalid-feedback{
+    opacity: 1;
+}
+
 .input-item > input:required + label::after {
     content:' *';
     color: red;
@@ -171,15 +198,12 @@ a:hover {
 .input-item > label {
     order: 1;
     text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
-.input-item > div.error {
+.input-item > div {
     order: 3;
     color: red;
-}
-
-div.error::after {
-    content: '❌ Passwords do not match.';
 }
 
 .form-submit {
@@ -187,7 +211,7 @@ div.error::after {
 }
 
 
-#createAccountButton {
+#submitButton {
     background: #758761;
     color: #ffffff;
     font-size: 0.9rem;
@@ -198,15 +222,21 @@ div.error::after {
     border-radius: 0.5rem;
     box-shadow: 3px 3px 3px #afb3af;
     transition: 0.075s;
+    cursor: pointer;
 }
 
-#createAccountButton:hover {
+#submitButton:hover {
     background-color: #667752;
 }
 
-#createAccountButton:active {
+#submitButton:active {
     background-color: #536340;
 }
+
+/* #submitButton:disabled {
+    background-color: #afafaf;
+    cursor: not-allowed;
+} */
 
 .form-submit > p {
     font-size: 0.9rem;

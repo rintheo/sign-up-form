@@ -54,6 +54,7 @@
                         placeholder="John"
                         required >
                       <label for="firstName ">First name</label> 
+                      <div class="invalid-feedback">❌ Please fill in this field</div>
                     </li>
                     <li class="input-item flex-column">
                       <input 
@@ -63,6 +64,7 @@
                         placeholder="Titor"
                         required >
                       <label for="lastName">Last name</label>
+                      <div class="invalid-feedback">❌ Please fill in this field</div>
                     </li>
                   </ul>
                 </li>
@@ -73,16 +75,18 @@
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="johntitor@email.com"
+                        placeholder="johntitor@example.com"
                         required >
                       <label for="email">Email</label>
+                      <div class="invalid-feedback">❌ Please fill in a valid email</div>
                     </li>
                     <li class="input-item flex-column">
-                      <label for="phoneNumber">Phone Number</label>
                       <input 
                         type="tel" 
                         id="phoneNumber" 
                         name="phoneNumber" >
+                      <label for="phoneNumber">Phone Number</label>
+                      <div class="invalid-feedback">❌ Placeholder</div>
                     </li>
                   </ul>
                 </li>
@@ -92,18 +96,18 @@
                       <input 
                         type="password" 
                         id="password" 
-                        class="error" 
                         name="password"
+                        minlength="8"
                         required >
                       <label for="password">Password</label>
-                      <div class="error"></div>
+                      <div class="invalid-feedback">❌ Must be at least 8 characters long</div>
                     </li>
                     <li class="input-item flex-column">
                       <input 
                         type="password" 
                         id="confirmPassword" 
-                        class="error"
                         name="confirmPassword"
+                        minlength="8"
                         required >
                       <label for="confirmPassword">Confirm Password</label>
                     </li>
@@ -112,7 +116,7 @@
               </ul>
             </section>
             <div class="form-submit">
-              <button type="submit" id="createAccountButton">Create Account</button>
+              <button type="submit" id="submitButton">Create Account</button>
               <p>Already have an account? <a href="" id="logInLink">Log in</a></p>
             </div>
           </form>
@@ -120,4 +124,5 @@
       </div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>
