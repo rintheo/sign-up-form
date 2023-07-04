@@ -1,6 +1,10 @@
 const submit = document.querySelector('#submitButton');
 
 document
+  .querySelector('#currentYear')
+  .textContent = new Date().getFullYear();
+
+document
   .querySelectorAll('input')
   .forEach(input => {
     input.addEventListener('blur', touched);
